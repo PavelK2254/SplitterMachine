@@ -1,14 +1,14 @@
-const APIS = require('./APIs')
-const request = require('request');
+import { selfPoint } from './APIs';
+import request from 'request';
 
 const DEFAULT_PORT = 8080;
 const options = {
     'json': true
 }
 
-exports.getProductsJSON = function(page) {
+export function getProductsJSON(page) {
     return new Promise(function(resolve, reject) {
-        request(APIS.selfPoint.getProductsByPage(page), { options }, (err, res, body) => {
+        request(selfPoint.getProductsByPage(page), { options }, (err, res, body) => {
             if (err) {
                 reject(err);
 
