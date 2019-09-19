@@ -42,10 +42,10 @@ export function addNewOrdersToDB(order) {
     return new Promise(function(resolve, reject) {
         MongoClient.connect(url, options, function(err, db) {
             if (err) throw err;
-            var dbo = db.db("mydb");
+            var dbo = db.db(dbName);
             var newOrder = order;
 
-            dbo.collection("customers").insertMany(newOrder, function(err, res) {
+            dbo.collection(collectionName).insertMany(newOrder, function(err, res) {
                 if (err) {
                     db.close();
                     reject(err);
@@ -61,4 +61,26 @@ export function addNewOrdersToDB(order) {
         });
     })
 
+}
+
+
+
+export function getOrderByBarcode(barcode) {
+    return new Promise(function(resolve, reject) {
+        MongoClient.connect(url, function(err, db) {
+            if (err) {
+                reject(err);
+            };
+            var dbo = db.db(dbName);
+            dbo.collection(collectionName).findOne({ barcode: barcode }, function(err, result) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result.orderNumber);
+                }
+
+                db.close();
+            });
+        });
+    });
 }
