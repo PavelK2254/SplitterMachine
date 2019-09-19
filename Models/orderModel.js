@@ -1,6 +1,5 @@
 export class OrderModel {
-    constructor(id, orderNum, barcodeNum, numberOfUnits, status, productName) {
-        this.id = id;
+    constructor(orderNum, barcodeNum, numberOfUnits, status, productName) {
         this.orderNum = orderNum;
         this.barcodeNum = barcodeNum;
         this.numberOfUnits = numberOfUnits;

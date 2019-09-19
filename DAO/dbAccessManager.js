@@ -12,7 +12,6 @@ export function init() {
                 reject(err)
             };
             var dbo = db.db(dbName);
-
             dbo.listCollections().toArray(function(err, items) {
                 if (err) {
                     reject(err)
@@ -29,13 +28,10 @@ export function init() {
                     });
                 } else {
                     resolve(`Collection ${collectionName} Is available`);
-
                 }
-
             });
         });
     })
-
 }
 
 export function addNewOrdersToDB(order) {
@@ -44,16 +40,12 @@ export function addNewOrdersToDB(order) {
             if (err) throw err;
             var dbo = db.db(dbName);
             var newOrder = order;
-
             dbo.collection(collectionName).insertMany(newOrder, function(err, res) {
                 if (err) {
                     db.close();
                     reject(err);
                     console.log(err);
-
                 } else {
-
-                    //console.log(`${order.id} inserted`);
                     resolve(res);
                     db.close();
                 }
@@ -68,17 +60,18 @@ export function addNewOrdersToDB(order) {
 export function getOrderByBarcode(barcode) {
     return new Promise(function(resolve, reject) {
         MongoClient.connect(url, function(err, db) {
-            if (err) {
-                reject(err);
-            };
+            if (err) reject(err);
             var dbo = db.db(dbName);
-            dbo.collection(collectionName).findOne({ barcode: barcode }, function(err, result) {
+            dbo.collection(collectionName).findOne({ barcodeNum: barcode }, function(err, result) {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(result.orderNumber);
+                    if (result != null) {
+                        resolve(`Order: ${result.orderNum}`);
+                    } else {
+                        reject(`No item found for barcode ${barcode}`);
+                    }
                 }
-
                 db.close();
             });
         });
