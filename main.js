@@ -1,4 +1,6 @@
-import { updateDbWithNewOrders, getSingleOrder } from './Controller/ordersFetcher'
+import { updateDbWithNewOrders, getSingleOrder, addtestOrders } from './Controller/ordersFetcher';
+import { OrderModel } from './Models/orderModel';
+
 const express = require('express');
 const app = express();
 const port = 3000
@@ -12,6 +14,7 @@ function main() {
 
 function fetchNewOrders() {
     //updateDbWithNewOrders();
-    getSingleOrder('60');
+    //getSingleOrder('60');
+    //addtestOrders();
 }
 main();

@@ -1,5 +1,6 @@
 import { getProductsJSON } from '../Networking/dataRepository';
 import { OrderModel } from '../Models/orderModel';
+import { exampleOrderNums } from '../Utils/orderNumbers';
 import { init, addNewOrdersToDB, getOrderByBarcode } from '../DAO/dbAccessManager';
 var currentPage = '1';
 var ordersGetter = getProductsJSON(currentPage);
@@ -30,6 +31,22 @@ export function updateDbWithNewOrders() {
     }, function(err) {
         console.log(err);
     });
+}
+
+//TODO Remove this
+export function addtestOrders() {
+    var testOrderNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    exampleOrderNums.forEach(element => {
+        ordersCollection.push(new OrderModel(testOrderNumber[Math.floor(Math.random() * 11)], element, 0, 1, "test item " + exampleOrderNums.indexOf(element)))
+            //console.log(new OrderModel(testOrderNumber[Math.floor(Math.random() * 11)], element, 0, 1, "test item " + exampleOrderNums.indexOf(element)));
+        addNewOrdersToDB(ordersCollection).then(function(result) {
+            console.log(result);
+
+        }, function(err) {
+            console.error(err);
+        })
+    });
+
 }
 
 
