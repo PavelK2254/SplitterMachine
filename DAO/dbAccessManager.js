@@ -62,12 +62,12 @@ export function getOrderByBarcode(barcode) {
         MongoClient.connect(url, function(err, db) {
             if (err) reject(err);
             var dbo = db.db(dbName);
-            dbo.collection(collectionName).findOne({ barcodeNum: barcode }, function(err, result) {
+            dbo.collection(collectionName).findOne({ barcodeNum: +barcode }, function(err, result) {
                 if (err) {
                     reject(err);
                 } else {
                     if (result != null) {
-                        resolve(`Order: ${result.orderNum}`);
+                        resolve(result.orderNum);
                     } else {
                         reject(`No item found for barcode ${barcode}`);
                     }
