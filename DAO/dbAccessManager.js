@@ -1,5 +1,5 @@
 const collectionName = "ordersTest";
-const options = { useNewUrlParser: false, useUnifiedTopology: false };
+const options = { useNewUrlParser: true, useUnifiedTopology: true };
 const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';
 var url = "mongodb://localhost:27017/" + dbName;
@@ -62,12 +62,12 @@ export function getOrderByBarcode(barcode) {
         MongoClient.connect(url, function(err, db) {
             if (err) reject(err);
             var dbo = db.db(dbName);
-            dbo.collection(collectionName).findOne({ barcodeNum: +barcode }, function(err, result) {
+            var orderBoject = dbo.collection(collectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options, function(err, result) {
                 if (err) {
                     reject(err);
                 } else {
-                    if (result != null) {
-                        resolve(result.orderNum);
+                    if (result.value != null && result.value != undefined) {
+                        resolve(result.value.orderNum);
                     } else {
                         reject(`No item found for barcode ${barcode}`);
                     }
