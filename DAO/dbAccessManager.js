@@ -62,7 +62,7 @@ export function getOrderByBarcode(barcode) {
         MongoClient.connect(url, function(err, db) {
             if (err) reject(err);
             var dbo = db.db(dbName);
-            var orderBoject = dbo.collection(collectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options, function(err, result) {
+            /*var orderBoject = dbo.collection(collectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options, function(err, result) {
                 if (err) {
                     reject(err);
                 } else {
@@ -73,7 +73,21 @@ export function getOrderByBarcode(barcode) {
                     }
                 }
                 db.close();
-            });
+            });*/
+
+            //TODO: status update disabled - remove this
+            dbo.collection(collectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
+                if (err) {
+                    reject(err)
+                } else {
+                    if (result != null && result != undefined) {
+                        resolve(result.orderNum);
+                    } else {
+                        reject(`No item found for barcode ${barcode}`);
+                    }
+                }
+                db.close();
+            })
         });
     });
 }

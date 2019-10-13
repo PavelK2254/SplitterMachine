@@ -5,9 +5,12 @@ const port = 1337;
 const hostName = 'localhost';
 const tcpServer = new net.Server();
 
+
 export function initTcpServer() {
+
+
     tcpServer.on('connection', (socket) => {
-        console.log('A new connection has been established.');
+        console.log('A new connection has been established. local address: ' + socket.localAddress);
         socket.write('Echo server\r\n');
         socket.on('error', (err) => {
             console.log('socket error ' + err.stack);
@@ -27,9 +30,6 @@ export function initTcpServer() {
             console.log('connection closed had error?: ' + hadError);
         })
 
-        socket.on('connect', () => {
-            console.log('Socket Connected');
-        })
 
         socket.on('end', () => {
             console.log('Socket connection ended');
@@ -38,7 +38,7 @@ export function initTcpServer() {
 
     })
 
-    tcpServer.listen(port, (socket) => {
-        console.log(`Server listening for connection requests on socket localhost:${port}`);
+    tcpServer.listen(port, () => {
+        console.log(`Server listening for connection requests on socket port ${port}`);
     });
 };
