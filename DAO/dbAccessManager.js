@@ -2,6 +2,7 @@ const collectionName = "ordersTest";
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';
+
 var url = "mongodb://localhost:27017/" + dbName;
 var availableCollections = [];
 
@@ -81,7 +82,7 @@ export function getOrderByBarcode(barcode) {
                     reject(err)
                 } else {
                     if (result != null && result != undefined) {
-                        resolve(result.orderNum);
+                        resolve(result.laneNum);
                     } else {
                         reject(`No item found for barcode ${barcode}`);
                     }
