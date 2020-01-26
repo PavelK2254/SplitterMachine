@@ -8,7 +8,13 @@ var currentPage = '1';
 var ordersGetter = getProductsJSON(currentPage);
 var ordersCollection = [];
 
-
+export function initDB() {
+    return new Promise((resolve, reject) => {
+        init().then((result) => {
+            resolve(result)
+        })
+    })
+}
 
 export function updateDbWithNewOrders() {
 
