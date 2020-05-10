@@ -1,6 +1,8 @@
 import { PlcResultModel } from '../Models/plcResultModel';
 import { getSingleOrder } from '../Controller/ordersFetcher';
 
+const STATIC_LANE = "2"
+
 export async function parseOrderData(socketString) {
     return new Promise(function(resolve, reject) {
         var barcodeObject;
@@ -9,7 +11,8 @@ export async function parseOrderData(socketString) {
                 barcodeObject = JSON.parse(socketString)
                 barcodeObject.forEach(element => {
                     getSingleOrder(element.tracingNum).then((result) => {
-                        resolve(new PlcResultModel("true", result.toString()))
+                        var modResult = result;
+                        resolve(new PlcResultModel("true", modResult.toString()))
                     }).catch((err) => {
                         reject(new PlcResultModel("false", "Error: " + err));
                     })

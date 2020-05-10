@@ -19,7 +19,7 @@ export function initTcpServer() {
             var textChunk = data.toString('utf8');
             console.log(`recieved ${textChunk}`);
             parseOrderData(textChunk).then((result) => {
-                console.log(`Returning result: ${result}`);
+                console.log(`Returning result: ${JSON.stringify(result)}`);
                 socket.write(JSON.stringify(result));
             }).catch((reason) => {
                 socket.write(JSON.stringify(reason));
@@ -39,6 +39,6 @@ export function initTcpServer() {
     })
 
     tcpServer.listen(port, () => {
-        console.log(`Server listening for connection requests on socket port ${port}`);
+        console.log(`Server listening for connection requests on socket port ${port} host ${hostName}`);
     });
 };

@@ -1,0 +1,1 @@
+nodemon  -r   esm main.js
