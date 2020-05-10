@@ -3,7 +3,7 @@ import { parseOrderData } from '../Controller/orderParser'
 
 const port = 1337;
 const hostName = 'localhost';
-const tcpServer = new net.Server();
+const tcpServer = new net.createServer();
 
 
 export function initTcpServer() {
@@ -38,7 +38,7 @@ export function initTcpServer() {
 
     })
 
-    tcpServer.listen(port, () => {
-        console.log(`Server listening for connection requests on socket port ${port} host ${hostName}`);
+    tcpServer.listen(port, hostName, () => {
+        console.log(`Server listening for connection requests on socket port ${port}`, tcpServer.address());
     });
 };

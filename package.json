@@ -1,0 +1,30 @@
+{
+  "name": "splittermachine",
+  "version": "1.0.0",
+  "description": "splitter machine server",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "mongodb": "^3.3.2",
+    "request": "^2.88.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelK2254/SplitterMachine.git"
+  },
+  "author": "pavel4567@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelK2254/SplitterMachine/issues"
+  },
+  "homepage": "https://github.com/PavelK2254/SplitterMachine#readme"
+}
