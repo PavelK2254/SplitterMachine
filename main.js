@@ -14,7 +14,7 @@ function main() {
     
     //getOrder('7290005230806');
     console.log("Connecting to the DB...");
-    //fetchNewOrders();
+    fetchNewOrders();
     initDB().then((result) => {
         console.log("DB initialized");
         initTcpServer();

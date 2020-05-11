@@ -1,4 +1,5 @@
-const collectionName = "20200511CollectionC1";
+const collectionName = require("./collectionName.json");
+const currentCollectionName = collectionName.collectionName.toString()
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';
@@ -8,6 +9,7 @@ var availableCollections = [];
 var dbo;
 
 export function init() {
+    console.log(`Collection name: ${currentCollectionName}`);
     return new Promise(function(resolve, reject) {
         MongoClient.connect(url, options, function(err, db) {
             if (err) {
@@ -20,16 +22,16 @@ export function init() {
                 };
                 availableCollections = items;
                 if (items.length == 0) {
-                    console.log(`No collections in database, creating ${collectionName}`)
-                    dbo.createCollection(collectionName, function(err, res) {
+                    console.log(`No collections in database, creating ${currentCollectionName}`)
+                    dbo.createCollection(currentCollectionName, function(err, res) {
                         if (err) {
                             reject(err)
                         };
-                        resolve(`Collection created! ${collectionName}`);
+                        resolve(`Collection created! ${currentCollectionName}`);
                         db.close();
                     });
                 } else {
-                    resolve(`Collection ${collectionName} Is available`);
+                    resolve(`Collection ${currentCollectionName} Is available`);
                 }
             });
         });
@@ -42,7 +44,7 @@ export function addNewOrdersToDB(order) {
             if (err) throw err;
             dbo = db.db(dbName);
             var newOrder = order;
-            dbo.collection(collectionName).insertMany(newOrder, function(err, res) {
+            dbo.collection(currentCollectionName).insertMany(newOrder, function(err, res) {
                 if (err) {
                     db.close();
                     reject(err);

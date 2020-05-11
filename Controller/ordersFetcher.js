@@ -3,7 +3,7 @@ import { OrderModel } from '../Models/orderModel';
 //import { exampleOrderNums } from '../Utils/orderNumbers';
 import { init, addNewOrdersToDB, getOrderByBarcode } from '../DAO/dbAccessManager';
 import { resolve } from 'dns';
-var exampleOrdersJson = require('../OrderExamples/20200511C1.json');
+var exampleOrdersJson = require('../OrderExamples/20200511C2.json');
 var currentPage = '1';
 var ordersGetter = getProductsJSON(currentPage);
 var ordersCollection = [];
