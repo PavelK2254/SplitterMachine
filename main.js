@@ -11,10 +11,10 @@ app.use(bodyParser())
 function main() {
     // app.get('/', (req, res) => res.send('Hello World!'))
     // app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-    //fetchNewOrders();
+    
     //getOrder('7290005230806');
     console.log("Connecting to the DB...");
-
+    //fetchNewOrders();
     initDB().then((result) => {
         console.log("DB initialized");
         initTcpServer();

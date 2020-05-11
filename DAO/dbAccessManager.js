@@ -1,4 +1,4 @@
-const collectionName = "ordersTest";
+const collectionName = "20200511CollectionC1";
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';

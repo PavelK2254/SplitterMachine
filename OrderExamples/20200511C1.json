@@ -1,0 +1,538 @@
+[
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 7290004127329,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קוטג תנובה 5%"
+ },
+ {
+   "laneNum": 9,
+   "orderNum": 0,
+   "barcodeNum": 7290000463377,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "זיתים חרוזית בית השיטה"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 7290004127336,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קוטג תנובה 9%"
+ },
+ {
+   "laneNum": 12,
+   "orderNum": 0,
+   "barcodeNum": 7290110325732,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קוקוס 15 גרם חלבון go יופלה"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290014820005,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "L ביצים נוף גליל 12 יח׳"
+ },
+ {
+   "laneNum": 10,
+   "orderNum": 0,
+   "barcodeNum": 7290011778118,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "L ביצים מן הטבע 12 יח׳"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290100687109,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "במבה נוגט 60 גרם"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290000144474,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "שמן קנולה עץ הזית"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290000068770,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "במבה 80 גרם"
+ },
+ {
+   "laneNum": 11,
+   "orderNum": 0,
+   "barcodeNum": 7290003427154,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "שמן זית זיתא 750 מ״ל זכוכית"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 7290011598402,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סנו מקסימה 4 ליטר Musk מרכך כביסה"
+ },
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 7290101869726,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "ג׳ל למדיח פיניש 1 ליטר"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 7290004131074,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "חלב תנובה 3% קרטון 1 ליטר"
+ },
+ {
+   "laneNum": 10,
+   "orderNum": 0,
+   "barcodeNum": 80051428,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "נוטלה זכוכית 825 גרם"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290000120836,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מיונז הלמנס 394 גרם"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 7290105965738,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "משקה דנונה תות בננה 267 גרם"
+ },
+ {
+   "laneNum": 8,
+   "orderNum": 0,
+   "barcodeNum": 7290013269300,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סנו סושי ניילון נצמד עם סכין 150 מטר"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290012823381,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סנו מקסימה מרכך כביסה סנסטיב מרוכז"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290000055336,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "משקה יופלה אפרסק בננה 1.5% שומן"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 7290107956642,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תרסיס שמן זית יד מרדכי"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290011018283,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "פיוז טי אפרסק 1.5 ליטר"
+ },
+ {
+   "laneNum": 12,
+   "orderNum": 0,
+   "barcodeNum": 7290110563455,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "חלב מועשר בבקבוק דל לקטוז יטבתה 3%"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 3600523782567,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "שמפו לוריאל אלביב משקם"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 7290112348548,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "שוקולד לבן עלית 100 גרם"
+ },
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 7290001305058,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סבון גוף נוזלי פלמוליב דבש 500 מ״ל"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 8715700423906,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קטשופ מתבל עגבניות היינס מופחת נתרן 550 גרם"
+ },
+ {
+   "laneNum": 10,
+   "orderNum": 0,
+   "barcodeNum": 7290130124601,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סבון גוף נוזלי פלמוליב דבש 750 מ״ל עם משאבה"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 5900020026552,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "דגני בוקר צ׳יריוס 625 גרם"
+ },
+ {
+   "laneNum": 11,
+   "orderNum": 0,
+   "barcodeNum": 7290107647854,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "דגני בוקר שוגי תלמה 500 גרם"
+ },
+ {
+   "laneNum": 9,
+   "orderNum": 0,
+   "barcodeNum": 7290000307985,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תירס מתוק פרי גליל ללא סוכר ומלח 285 גרם"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290000307220,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תירס מתוק פרי גליל 285 גרם"
+ },
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 8690777206051,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "Sera חציל קלוי על האש 650 גרם"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 7290003715930,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "שומשום זרובי 100 גרם"
+ },
+ {
+   "laneNum": 8,
+   "orderNum": 0,
+   "barcodeNum": 7290100247815,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מרק עגבניות קנור נמס בכוס 39 גרם"
+ },
+ {
+   "laneNum": 12,
+   "orderNum": 0,
+   "barcodeNum": 4712892880221,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קיסמי שיניים פלסטיק אינטרדנטל"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290002008743,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סוכר וניל הנמל 10 גרם בשקיות"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 7290000129099,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תיבוליות קנור עשבי תיבול"
+ },
+ {
+   "laneNum": 9,
+   "orderNum": 0,
+   "barcodeNum": 7290010300860,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "ALFA אציטון"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290003643707,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "גריסים סוגת"
+ },
+ {
+   "laneNum": 11,
+   "orderNum": 0,
+   "barcodeNum": 7290003643776,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "גרעיני תירס פופקורן סוגת"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290000111186,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מיונז תלמה 500 גרם"
+ },
+ {
+   "laneNum": 10,
+   "orderNum": 0,
+   "barcodeNum": 7290000465289,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "זיתים ירוקים מבוקעים בית השיטה"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290004063016,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מלח שולחן סלית 1 ק״ג"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 7290005610059,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תפ״א חבל מעון"
+ },
+ {
+   "laneNum": 12,
+   "orderNum": 0,
+   "barcodeNum": 7290000001692,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "תפ״א תפודי הארץ הטובה"
+ },
+ {
+   "laneNum": 8,
+   "orderNum": 0,
+   "barcodeNum": 7290001201596,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "ביצים 12 יח׳ מלסר"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290002517726,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מקלות קינמון טעם וריח"
+ },
+ {
+   "laneNum": 11,
+   "orderNum": 0,
+   "barcodeNum": 7290000295268,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "רדיד אלומניום סנו סושי 7.5 מטר"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 7290011018184,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "פיוז טי בקבוק אישי 500 מ״ל"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 7290011017873,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "פחית זירו 330 מ״ל"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290015221337,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "עלי גפן ממולאים"
+ },
+ {
+   "laneNum": 11,
+   "orderNum": 0,
+   "barcodeNum": 7290004122348,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "גבנ״ץ עמק בפלסטיק 200 גרם 9% שומן"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 835811008385,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סקוצ כריות ניקוי הנמל 2 יח׳ במארז"
+ },
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 7290005287527,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "טונה סטארקיס עם לימון 1 יח׳"
+ },
+ {
+   "laneNum": 9,
+   "orderNum": 0,
+   "barcodeNum": 7290013847485,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "טונה סטארקיס במים שישייה"
+ },
+ {
+   "laneNum": 12,
+   "orderNum": 0,
+   "barcodeNum": 7290008909860,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קולה זירו 1.5 ליטר בקבוק אחד"
+ },
+ {
+   "laneNum": 5,
+   "orderNum": 0,
+   "barcodeNum": 7290003009619,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סירופ בטעם ענבים פריגת 1.5 ליטר"
+ },
+ {
+   "laneNum": 8,
+   "orderNum": 0,
+   "barcodeNum": 7290001791349,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סנו אקונומיקה פיסגה 4 ליטר"
+ },
+ {
+   "laneNum": 4,
+   "orderNum": 0,
+   "barcodeNum": 7290000688732,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מי עדן שישייה"
+ },
+ {
+   "laneNum": 7,
+   "orderNum": 0,
+   "barcodeNum": 7290000188355,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "ניקול מגבת נייר שישייה"
+ },
+ {
+   "laneNum": 1,
+   "orderNum": 0,
+   "barcodeNum": 7290001596326,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "כוסות פלסטיק 100 יח׳"
+ },
+ {
+   "laneNum": 6,
+   "orderNum": 0,
+   "barcodeNum": 80042563,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "מחית עגבניות מוטי בקבוק זכוכית 700 גרם"
+ },
+ {
+   "laneNum": 10,
+   "orderNum": 0,
+   "barcodeNum": 7290005271762,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "ביצי חופש גליקסמן 12 יח׳"
+ },
+ {
+   "laneNum": 8,
+   "orderNum": 0,
+   "barcodeNum": 7290000176420,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קפה נמס עלית 200 גרם"
+ },
+ {
+   "laneNum": 3,
+   "orderNum": 0,
+   "barcodeNum": 7290000554532,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "צפתית מעודנת גד 5%"
+ },
+ {
+   "laneNum": 2,
+   "orderNum": 0,
+   "barcodeNum": 7290003119110,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "קולה רגילה שישייה"
+ },
+ {
+   "laneNum": 9,
+   "orderNum": 0,
+   "barcodeNum": 7290010051205,
+   "numberOfUnits": 0,
+   "status": 0,
+   "productName": "סלרי עלים א.אדמה"
+ }
+]
