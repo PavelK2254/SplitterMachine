@@ -2,7 +2,7 @@ import net, { Socket } from 'net';
 import { parseOrderData } from '../Controller/orderParser'
 
 const port = 1337;
-const hostName = 'localhost';
+const hostName = '0.0.0.0';
 const tcpServer = new net.createServer();
 
 
