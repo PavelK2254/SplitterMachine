@@ -18,25 +18,25 @@ export function initDB() {
 
 export function updateDbWithNewOrders() {
 
-    init().then(function (result) {
-        ordersGetter.then(function (result) {
+    init().then(function(result) {
+        ordersGetter.then(function(result) {
             result.products.forEach(element => {
                 console.log(`${element.id} ${element.id} ${element.barcode} 0, 1, ${element.longName}`);
                 //ordersCollection.push({ orderNumber: element.id, barcode: element.barcode, numberOfUnits: 0, status: 1, productName: element.longName })
                 ordersCollection.push(new OrderModel(element.id, element.barcode, 0, 1, element.longName))
             });
-            addNewOrdersToDB(ordersCollection).then(function (result) {
+            addNewOrdersToDB(ordersCollection).then(function(result) {
                 //getOrderByBarcode('60').then(function(result) {
                 console.log(result);
 
-            }, function (err) {
+            }, function(err) {
                 console.error(err);
             })
-        }, function (err) {
+        }, function(err) {
             console.log(err);
 
         })
-    }, function (err) {
+    }, function(err) {
         console.log(err);
     });
 }
@@ -71,23 +71,23 @@ export function addTestOrders() {
 
 
     })
-    addNewOrdersToDB(ordersCollection).then(function (result) {
-        console.log(result);
+    addNewOrdersToDB(ordersCollection).then(function(result) {
+            console.log(result);
 
-    }, function (err) {
-        console.error(err);
-    })
-    //console.table(ordersCollection)
+        }, function(err) {
+            console.error(err);
+        })
+        //console.table(ordersCollection)
 }
 
 
 
 export async function getSingleOrder(barcode) {
-    return new Promise(function (resolve, reject) {
-        getOrderByBarcode(barcode).then(function (result) {
+    return new Promise(function(resolve, reject) {
+        getOrderByBarcode(barcode).then(function(result) {
             console.log(result);
             resolve(result);
-        }, function (err) {
+        }, function(err) {
             console.log("Error " + err);
             reject(err);
         });

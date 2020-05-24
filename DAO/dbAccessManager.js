@@ -80,7 +80,7 @@ export function getOrderByBarcode(barcode) {
         });*/
 
         //TODO: status update disabled - remove this
-        dbo.collection(collectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
+        dbo.collection(currentCollectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
                 if (err) {
                     reject(err)
                 } else {
