@@ -63,35 +63,15 @@ export function addNewOrdersToDB(order) {
 
 export function getOrderByBarcode(barcode) {
     return new Promise(function(resolve, reject) {
-        // MongoClient.connect(url, function(err, db) {
-        //  if (err) reject(err);
-        // dbo = db.db(dbName);
-        /*var orderBoject = dbo.collection(collectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options, function(err, result) {
-            if (err) {
-                reject(err);
-            } else {
-                if (result.value != null && result.value != undefined) {
-                    resolve(result.value.orderNum);
+       // dbo.collection(currentCollectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
+        dbo.collection(currentCollectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options).then(result => {
+                console.log(`Result ${JSON.stringify(result,4)}`)
+                var resultObj = result.value
+                if (resultObj != null && resultObj != undefined) {
+                    resolve(resultObj.laneNum);
                 } else {
-                    reject(`No item found for barcode ${barcode}`);
+                    reject(`No item found for barcode ${barcode} or it is already scanned`);
                 }
-            }
-            db.close();
-        });*/
-
-        //TODO: status update disabled - remove this
-        dbo.collection(currentCollectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
-                if (err) {
-                    reject(err)
-                } else {
-                    if (result != null && result != undefined) {
-                        resolve(result.laneNum);
-                    } else {
-                        reject(`No item found for barcode ${barcode}`);
-                    }
-                }
-                //  db.close();
             })
-            // });
     });
 }
