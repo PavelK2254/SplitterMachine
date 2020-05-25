@@ -1,5 +1,4 @@
-const collectionName = require("./collectionName.json");
-const currentCollectionName = collectionName.collectionName.toString()
+const currentCollectionName = require("../Utils/config.json").collectionName;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';
@@ -61,10 +60,20 @@ export function addNewOrdersToDB(order) {
 
 
 
-export function getOrderByBarcode(barcode) {
+export function getOrderByBarcode(barcode,testMode) {
     return new Promise(function(resolve, reject) {
-       // dbo.collection(currentCollectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
-        dbo.collection(currentCollectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options).then(result => {
+        if(testMode){
+             dbo.collection(currentCollectionName).findOne({ barcodeNum: +barcode }, options, function(err, result) {
+                console.log(`Result ${JSON.stringify(result,4)}`)
+                var resultObj = result
+                if (resultObj != null && resultObj != undefined) {
+                    resolve(resultObj.laneNum);
+                } else {
+                    reject(`No item found for barcode ${barcode} or it is already scanned`);
+                }
+            })
+        }else{
+            dbo.collection(currentCollectionName).findOneAndUpdate({ barcodeNum: +barcode, status: 0 }, { $set: { status: 1 } }, options).then(result => {
                 console.log(`Result ${JSON.stringify(result,4)}`)
                 var resultObj = result.value
                 if (resultObj != null && resultObj != undefined) {
@@ -73,5 +82,7 @@ export function getOrderByBarcode(barcode) {
                     reject(`No item found for barcode ${barcode} or it is already scanned`);
                 }
             })
+        }
     });
 }
+

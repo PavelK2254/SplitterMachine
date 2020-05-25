@@ -1,14 +1,15 @@
 import { getProductsJSON } from '../Networking/dataRepository';
 import { OrderModel } from '../Models/orderModel';
-//import { exampleOrderNums } from '../Utils/orderNumbers';
 import { init, addNewOrdersToDB, getOrderByBarcode } from '../DAO/dbAccessManager';
 import { resolve } from 'dns';
 var exampleOrdersJson = require('../OrderExamples/20200511C2.json');
+var isTestMode = require('../Utils/config.json').testMode
 var currentPage = '1';
 var ordersGetter = getProductsJSON(currentPage);
 var ordersCollection = [];
 
 export function initDB() {
+    console.log(`Test mode = ${isTestMode}`)
     return new Promise((resolve, reject) => {
         init().then((result) => {
             resolve(result)
@@ -68,7 +69,7 @@ export function addTestOrders() {
 
 export async function getSingleOrder(barcode) {
     return new Promise(function(resolve, reject) {
-        getOrderByBarcode(barcode).then(function(result) {
+        getOrderByBarcode(barcode,isTestMode).then(function(result) {
             console.log(result);
             resolve(result);
         }, function(err) {
