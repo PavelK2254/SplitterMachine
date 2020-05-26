@@ -4,10 +4,11 @@ const dbName = 'splitterDB'
 import { MongoClient } from 'mongodb';
 
 var url = "mongodb://localhost:27017/" + dbName;
-var availableCollections = [];
+export var availableCollections = [];
 var dbo;
 
 export function init() {
+    
     console.log(`Collection name: ${currentCollectionName}`);
     return new Promise(function(resolve, reject) {
         MongoClient.connect(url, options, function(err, db) {
@@ -32,6 +33,7 @@ export function init() {
                 } else {
                     resolve(`Collection ${currentCollectionName} Is available`);
                 }
+            
             });
         });
     })
@@ -84,5 +86,17 @@ export function getOrderByBarcode(barcode,testMode) {
             })
         }
     });
+}
+
+export function resetAllStatuses(){
+    return new Promise(function(resolve, reject) {
+        dbo.collection(currentCollectionName).updateMany({status: 1},{ $set: { status: 0 } },options).then(result => {
+            console.log(`Reset all items in collection ${currentCollectionName}`)
+            resolve()
+        },err => {
+            console.log(`Failed to Reset all items in collection ${currentCollectionName} error: ${err}`)
+            reject(err)
+        })
+    })
 }
 
