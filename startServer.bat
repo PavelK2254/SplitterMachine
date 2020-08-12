@@ -1,1 +1,1 @@
-nodemon  -r   esm main.js
+npm start

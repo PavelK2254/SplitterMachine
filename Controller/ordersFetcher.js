@@ -1,12 +1,14 @@
 import { getProductsJSON } from '../Networking/dataRepository';
 import { OrderModel } from '../Models/orderModel';
-import { init, addNewOrdersToDB, getOrderByBarcode,resetAllStatuses } from '../DAO/dbAccessManager';
+import { init, addNewOrdersToDB, getOrderByBarcode, resetAllStatuses } from '../DAO/dbAccessManager';
 import { resolve } from 'dns';
 var exampleOrdersJson = require('../OrderExamples/20200511C2.json');
 var isTestMode = require('../Utils/config.json').testMode
 var currentPage = '1';
 var ordersGetter = getProductsJSON(currentPage);
 var ordersCollection = [];
+
+
 
 export function initDB() {
     console.log(`Test mode = ${isTestMode}`)
@@ -69,7 +71,7 @@ export function addTestOrders() {
 
 export async function getSingleOrder(barcode) {
     return new Promise(function(resolve, reject) {
-        getOrderByBarcode(barcode,isTestMode).then(function(result) {
+        getOrderByBarcode(barcode, isTestMode).then(function(result) {
             console.log(result);
             resolve(result);
         }, function(err) {
@@ -80,11 +82,11 @@ export async function getSingleOrder(barcode) {
 
 }
 
-export async function resetDBStatuses(){
+export async function resetDBStatuses() {
     return new Promise(function(resolve, reject) {
-        resetAllStatuses().then(function(result){
+        resetAllStatuses().then(function(result) {
             resolve(result)
-        },function(err){
+        }, function(err) {
             reject()
         })
     })
